@@ -24,12 +24,11 @@ elseif currentStatus == 0 then
             loadstring(game:HttpGet(Execute))()
         end
     end
-	print("Код для статуса 0 был выполнен")
 elseif currentStatus == 1 then
     -- Код для статуса 1 (ведутся технические работы)
-    warn("Ведутся технические работы, код не выполняется.")
+    warn("Ведутся технические работы")
     -- Тут можно добавить дополнительный код, например, отображение сообщения в игре
-	print("Код для статуса 1 был выполнен")
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Vu4eke/Operation-Hub_scripts/refs/heads/main/techical_work.lua"))() 
 else
     warn("Неизвестный статус: " .. tostring(currentStatus) .. ", выполнение скрипта прекращено.")
 end
